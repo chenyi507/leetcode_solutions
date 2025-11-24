@@ -1,3 +1,5 @@
+import unittest
+
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows == 1 or numRows >= len(s):
@@ -16,8 +18,6 @@ class Solution:
             cur_row += 1 if going_down else -1
         
         return ''.join([''.join(row) for row in char_list])
-
-import unittest
 
 class TestSolution(unittest.TestCase):
     def setUp(self):
